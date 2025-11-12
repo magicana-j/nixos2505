@@ -21,7 +21,7 @@
     priority = 100;
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-fairy"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -199,16 +199,16 @@
     ntfs3g exfatprogs
     htop btop wget curl fastfetch
 
-    geany
-    xarchiver p7zip
+    #geany
+    #xarchiver p7zip
 
     # Graphics
-    gimp
-    shotwell
+    #gimp
+    #shotwell
 #    inkscape
 
     # Video
-    vlc
+    #vlc
 
     # Utilities
     isoimagewriter
@@ -219,20 +219,20 @@
 
     # Office
 #    libreoffice-fresh
-    podman
-    podman-compose     # Docker Composeファイルを使用可能に
-    podman-tui         # Podman用のTUIツール
-    buildah            # コンテナイメージのビルド
-    skopeo             # イメージの操作・転送
-    dive               # イメージレイヤーの分析
+    #podman
+    #podman-compose     # Docker Composeファイルを使用可能に
+    #podman-tui         # Podman用のTUIツール
+    #buildah            # コンテナイメージのビルド
+    #skopeo             # イメージの操作・転送
+    #dive               # イメージレイヤーの分析
     
     # Tor関連
 #    tor
 #    tor-browser-bundle-bin  # ネイティブTor Browser（比較用）
     
     # デバッグ・監視ツール
-    ctop               # コンテナのトップ
-    lazydocker         # Docker/Podman用のTUI
+    #ctop               # コンテナのトップ
+    #lazydocker         # Docker/Podman用のTUI
 
   ];
 
