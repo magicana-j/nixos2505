@@ -11,7 +11,7 @@
     let
       system = "x86_64-linux";
     in {
-      nixosConfigurations.nixos-lady = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos-fairy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
