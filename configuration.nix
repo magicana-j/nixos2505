@@ -68,12 +68,17 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-      noto-fonts-cjk-serif
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
-      source-code-pro
-      nerdfetch
-      udev-gothic-nf
+		  noto-fonts-cjk-sans
+		  noto-fonts-color-emoji
+		  liberation_ttf
+		  fira-code
+		  fira-code-symbols
+		  mplus-outline-fonts.githubRelease
+		  dina-font
+		  proggyfonts
+			#source-code-pro
+      #nerdfetch
+      #udev-gothic-nf
     ];
 
     fontDir.enable = true;
