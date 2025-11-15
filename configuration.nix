@@ -148,48 +148,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  virtualisation.podman = {
-    enable = true;
-    
-    # Dockerとの互換性（docker コマンドのエイリアス）
-    dockerCompat = true;
-    
-    # Docker Composeとの互換性
-    dockerSocket.enable = true;
-    
-    # デフォルトネットワークの設定
-    defaultNetwork.settings = {
-      dns_enabled = true;
-    };
-    
-    # 自動更新の有効化（オプション）
-    autoPrune = {
-      enable = true;
-      dates = "weekly";
-    };
-  };
-
-  # コンテナイメージのレジストリ設定
-  virtualisation.containers = {
-    enable = true;
-    
-    # registries.confの設定
-    registries.search = [
-      "docker.io"
-      "quay.io"
-      "registry.fedoraproject.org"
-    ];
-    
-    # 非セキュアレジストリ（必要に応じて）
-    # registries.insecure = [ "localhost:5000" ];
-  };
-
-  # systemdサービスの設定（オプション）
-  systemd.services.podman-auto-update = {
-    enable = true;
-    description = "Podman auto-update service";
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -205,7 +163,6 @@
     # Graphics
     #gimp
     #shotwell
-#    inkscape
 
     # Video
     #vlc
@@ -216,23 +173,6 @@
     gparted
 #    unetbootin
 #    ventoy-full
-
-    # Office
-#    libreoffice-fresh
-    #podman
-    #podman-compose     # Docker Composeファイルを使用可能に
-    #podman-tui         # Podman用のTUIツール
-    #buildah            # コンテナイメージのビルド
-    #skopeo             # イメージの操作・転送
-    #dive               # イメージレイヤーの分析
-    
-    # Tor関連
-#    tor
-#    tor-browser-bundle-bin  # ネイティブTor Browser（比較用）
-    
-    # デバッグ・監視ツール
-    #ctop               # コンテナのトップ
-    #lazydocker         # Docker/Podman用のTUI
 
   ];
 
