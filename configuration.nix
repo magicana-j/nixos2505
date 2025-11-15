@@ -68,15 +68,15 @@
   fonts = {
     packages = with pkgs; [
       noto-fonts
-		  noto-fonts-cjk-sans
-		  noto-fonts-color-emoji
-		  liberation_ttf
-		  fira-code
-		  fira-code-symbols
-		  mplus-outline-fonts.githubRelease
-		  dina-font
-		  proggyfonts
-			#source-code-pro
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      liberation_ttf
+      fira-code
+      fira-code-symbols
+      mplus-outline-fonts.githubRelease
+      dina-font
+      proggyfonts
+      #source-code-pro
       #nerdfetch
       #udev-gothic-nf
     ];
@@ -109,14 +109,12 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };
 
   services.blueman.enable = true;
-
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
